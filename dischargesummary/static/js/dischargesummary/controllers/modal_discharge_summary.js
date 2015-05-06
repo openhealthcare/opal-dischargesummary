@@ -3,7 +3,9 @@
 // 
 controllers.controller(
     'ModalDischargeSummaryCtrl',
-    function($scope, $modalInstance){
+    function($scope, $modalInstance, episode){
+
+        $scope.episode = episode;
 
         // Let's have a nice way to kill the modal.
         $scope.cancel = function() {

@@ -7,5 +7,6 @@ from dischargesummary import views
 
 urlpatterns = patterns(
     '',
-    #url(pattern, view)
+    url(r'^dischargesummary/modals/(?P<name>\w+)/?$',
+        views.DischargeTemplateView.as_view()),
 )
