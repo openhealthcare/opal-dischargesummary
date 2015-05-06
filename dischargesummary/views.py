@@ -14,5 +14,7 @@ class DischargeTemplateView(TemplateView):
         from dischargesummary import DischargeTemplate
 
         ctx = super(DischargeTemplateView, self).get_context_data(**kwargs)
-        ctx['content'] = DischargeTemplate.get(self.name).template
+        summary = DischargeTemplate.get(self.name)
+        ctx['content'] = summary.template
+        ctx['heading'] = summary.button_display
         return ctx

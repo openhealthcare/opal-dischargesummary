@@ -72,6 +72,7 @@ class DischargeTemplate(object):
     """
     name         = 'Please name me Larry!'
     template     = None
+    button_display = 'Discharge Summary'
 
     @classmethod
     def get(klass, name):
