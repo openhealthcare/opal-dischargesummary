@@ -2,12 +2,12 @@
 Plugin definition for the dischargesummary OPAL plugin
 """
 from django.conf import settings
-from opal.core.plugins import OpalPlugin
+from opal.core import plugins
 from opal.utils import stringport, camelcase_to_underscore
 
 from dischargesummary.urls import urlpatterns
 
-class DischargesummaryPlugin(OpalPlugin):
+class DischargesummaryPlugin(plugins.OpalPlugin):
     """
     Main entrypoint to expose this plugin to our OPAL application.
     """
@@ -47,6 +47,7 @@ class DischargesummaryPlugin(OpalPlugin):
         """
         return {}
 
+plugins.register(DischargesummaryPlugin)
 
 # So we only do it once
 IMPORTED_FROM_APPS = False
