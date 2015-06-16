@@ -4,9 +4,7 @@ Unittests for dischargesummary
 from opal.core.test import OpalTestCase
 
 import dischargesummary
-
-class TestDischargeTemplate(dischargesummary.DischargeTemplate):
-    name = 'Test template'
+from dischargesummary.tests import TestDischargeTemplate, TestDisplayTemplate
 
 class DischargeTemplateTestCase(OpalTestCase):
     def test_get(self):
@@ -17,5 +15,6 @@ class DischargeTemplateTestCase(OpalTestCase):
         self.assertEqual('testtemplate', TestDischargeTemplate.slug())
 
     def test_list(self):
-        self.assertEqual([TestDischargeTemplate], dischargesummary.DischargeTemplate.list())
+        expected = [TestDisplayTemplate, TestDischargeTemplate]
+        self.assertEqual(expected, dischargesummary.DischargeTemplate.list())
 

@@ -27,6 +27,8 @@ settings.configure(DEBUG=True,
                                    'opal',
                                    'dischargesummary',))
 
+import django
+django.setup()
 
 from django.test.runner import DiscoverRunner
 test_runner = DiscoverRunner(verbosity=1)
