@@ -1,6 +1,8 @@
 module.exports = function(config){
   var browsers, basePath, coverageReporter;
-
+  var preprocessors = {
+    __dirname +  '/../dischargesummary/static/js/dischargesummary/controllers/*.js': 'coverage',
+  }
   if(process.env.TRAVIS){
       browsers = ["Firefox"];
       basePath = '/home/travis/virtualenv/python2.7/src/opal/opal/static/js';
@@ -81,9 +83,7 @@ module.exports = function(config){
         browserDisconnectTolerance : 1, // default 0
         browserNoActivityTimeout : 4*60*1000, //default 10000
         captureTimeout : 4*60*1000, //default 60000
-        preprocessors: {
-                __dirname +  '/../dischargesummary/static/js/dischargesummary/controllers/*.js': 'coverage',
-        },
+        preprocessors: preprocessors,
         reporters: ['progress', 'coverage'],
         coverageReporter: coverageReporter
     });
