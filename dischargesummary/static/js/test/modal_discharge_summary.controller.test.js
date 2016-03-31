@@ -13,10 +13,9 @@ describe('ModalDischargeSummaryCtrl', function (){
         $controller  = $injector.get('$controller');
         $httpBackend = $injector.get('$httpBackend');
         Episode      = $injector.get('Episode');
-        
-        $modalInstance = $modal.open({template: 'Not a real template'});
-        episode = new Episode({});
 
+        $modalInstance = $modal.open({template: 'Not a real template'});
+        episode = new Episode({demographics: [{patient_id: 1}]});
         controller = $controller('ModalDischargeSummaryCtrl', {
             $scope        : $scope,
             $modalInstance: $modalInstance,
@@ -25,7 +24,7 @@ describe('ModalDischargeSummaryCtrl', function (){
 
     }));
 
-    
+
     describe('cancel()', function (){
         it('Should close the modal', function () {
             spyOn($modalInstance, 'close');
@@ -33,5 +32,5 @@ describe('ModalDischargeSummaryCtrl', function (){
             expect($modalInstance.close).toHaveBeenCalledWith('cancel');
         });
     });
-    
+
 });
