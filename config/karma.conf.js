@@ -1,8 +1,8 @@
 module.exports = function(config){
   var browsers, basePath, coverageReporter;
-  var preprocessors = {
-    __dirname +  '/../dischargesummary/static/js/dischargesummary/controllers/*.js': 'coverage',
-  }
+  var preprocessors = {}
+  preprocessors[__dirname +  '/../dischargesummary/static/js/dischargesummary/controllers/*.js'] = 'coverage';
+  
   if(process.env.TRAVIS){
       browsers = ["Firefox"];
       basePath = '/home/travis/virtualenv/python2.7/src/opal/opal/static/js';
