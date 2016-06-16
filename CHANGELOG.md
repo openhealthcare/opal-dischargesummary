@@ -1,4 +1,8 @@
-### 0.2 Release
+### 0.3.0 Release
+
+Breaks backwards compatibility with OPAL < 0.7.0
+
+### 0.2.0 Release
 
 Breaks backwards compatibility with Django < 1.7 (Test runner calls django.setup()
 
