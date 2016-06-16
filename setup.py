@@ -8,10 +8,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='opal-dischargesummary',
-    version='0.1',
+    version='0.3.0',
     packages=['dischargesummary'],
     include_package_data=True,
-    license='LICENSE',  
+    license='LICENSE',
     description='The dischargesummary OPAL Plugin',
     long_description=README,
     url='http://opal.openhealthcare.org.uk/',
