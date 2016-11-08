@@ -1,3 +1,7 @@
+### 0.4.0 Release
+
+Depends on OPAL v0.8.0
+
 ### 0.3.0 Release
 
 Breaks backwards compatibility with OPAL < 0.7.0
