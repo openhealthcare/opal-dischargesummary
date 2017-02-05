@@ -1,27 +1,9 @@
 """
-Plugin definition for the dischargesummary OPAL plugin
+Package definition for the dischargesummary OPAL plugin
 """
 from django.conf import settings
-from opal.core import plugins
+
 from opal.utils import stringport, camelcase_to_underscore
-
-from dischargesummary.urls import urlpatterns
-
-class DischargesummaryPlugin(plugins.OpalPlugin):
-    """
-    Main entrypoint to expose this plugin to our OPAL application.
-    """
-    urls = urlpatterns
-    javascripts = {
-        # Add your javascripts here!
-        'opal.controllers': [
-            # 'js/dischargesummary/app.js',
-            'js/dischargesummary/controllers/modal_discharge_summary.js',
-            # 'js/dischargesummary/services/larry.js',
-        ]
-    }
-
-plugins.register(DischargesummaryPlugin)
 
 # So we only do it once
 IMPORTED_FROM_APPS = False
@@ -30,7 +12,7 @@ def import_from_apps():
     """
     Iterate through installed apps attempting to import app.dischargesummaries
     This way we allow our implementation, or plugins, to define their
-    own discharge summary templates. 
+    own discharge summary templates.
     """
     for app in settings.INSTALLED_APPS:
         try:
@@ -40,6 +22,7 @@ def import_from_apps():
     global IMPORTED_FROM_APPS
     IMPORTED_FROM_APPS = True
     return
+
 
 class DischargeTemplate(object):
     """
@@ -56,7 +39,7 @@ class DischargeTemplate(object):
         """
         if not IMPORTED_FROM_APPS:
             import_from_apps()
-            
+
         for sub in klass.__subclasses__():
             if sub.slug() == name:
                 return sub
