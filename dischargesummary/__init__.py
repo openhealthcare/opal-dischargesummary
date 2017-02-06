@@ -1,6 +1,8 @@
 """
 Package definition for the dischargesummary OPAL plugin
 """
+
+# required until we move this feature to a discoverable
 from django.conf import settings
 
 from opal.utils import stringport, camelcase_to_underscore
