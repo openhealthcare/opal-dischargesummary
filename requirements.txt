@@ -1,2 +1,2 @@
--e git://github.com/openhealthcare/opal.git@v0.8.0#egg=opal
+-e git://github.com/openhealthcare/opal.git@v0.10.0#egg=opal
 mock
