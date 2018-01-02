@@ -1,12 +1,11 @@
 """
-Urls for the dischargesummary OPAL plugin
+Urls for the dischargesummary Opal plugin
 """
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from dischargesummary import views
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^dischargesummary/modals/(?P<name>\w+)/?$',
         views.DischargeTemplateView.as_view()),
-)
+]
