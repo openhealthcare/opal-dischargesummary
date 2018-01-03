@@ -1,7 +1,7 @@
 This is dischargesummary - an [OPAL](https://github.com/openhealthcare/opal) plugin.
 
 [![Build
-Status](https://travis-ci.org/openhealthcare/opal-dischargesummary.png?branch=v0.5.0)](https://travis-ci.org/openhealthcare/opal-summary)
+Status](https://travis-ci.org/openhealthcare/opal-dischargesummary.png?branch=v0.5.0)](https://travis-ci.org/openhealthcare/opal-dischargesummary)
 
 #### Creating a modal summary: 
 
