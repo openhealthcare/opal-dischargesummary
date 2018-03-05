@@ -1,4 +1,11 @@
-<button class="btn btn-primary" ng-click="open_modal('ModalDischargeSummaryCtrl', '/dischargesummary/modals/{{ name }}/', {episode: episode})">
+<button
+  analytics-category="discharge-summary"
+  analytics-label="[[ episode.category_name ]]"
+  analytics-event="{{ name }}"
+  class="btn btn-primary"
+  analytics-on
+  ng-click="open_modal('ModalDischargeSummaryCtrl', '/dischargesummary/modals/{{ name }}/', {episode: episode})"
+>
   <i class="fa fa-envelope-o"></i>
   {{ button_display }}
 </button>
