@@ -1,11 +1,12 @@
 """
-Template helpers for Modal Discharge Summaries 
+Template helpers for Modal Discharge Summaries
 """
 from django import template
 
 register = template.Library()
 
 from dischargesummary import DischargeTemplate
+
 
 @register.inclusion_tag('modal_summary_action.html')
 def modalsummary(name):
